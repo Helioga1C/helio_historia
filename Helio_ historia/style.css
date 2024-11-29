@@ -1,0 +1,98 @@
+/* Corpo da página */
+body {
+    background-color: #152E1A; /* Um tom mais escuro para reforçar o contraste */
+    color: #F0F8F0; /* Branco levemente esverdeado para suavizar a leitura */
+    font-family: "Bai Jamjuree", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Usa altura total da viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Remove barras de rolagem desnecessárias */
+}
+
+/* Botões */
+button {
+    background-color: #64A712;
+    color: #FFFFFF;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #76C213; /* Um tom mais claro no hover */
+    transform: translateY(-2px); /* Efeito de "flutuar" */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0); /* Volta ao normal ao clicar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Divs de passos */
+.passo {
+    display: none;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.passo.ativo {
+    display: block;
+}
+
+/* Animação para transições */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Estilo principal */
+main {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.6); /* Fundo translúcido */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra para destaque */
+    backdrop-filter: blur(6px); /* Efeito de desfoque */
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para imagens */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    main {
+        max-width: 95%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
